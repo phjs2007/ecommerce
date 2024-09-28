@@ -1,10 +1,8 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="w-full h-12  box-content absolute top-0 z-10">
+        <header className="w-full h-12  box-content absolute top-0 z-30 text-white">
             <div className="flex justify-between items-center">
                 <div className="flex space-x-5 md:space-x-20 w-1/2">
                     <div className="flex justify-start items-center  box-border h-full w-full " >
