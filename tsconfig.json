@@ -25,7 +25,12 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": [
+      "node",
+      "react",
+      "react-dom"
+    ] // Adicione esta linha
   },
   "include": [
     "next-env.d.ts",
