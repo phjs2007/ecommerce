@@ -35,7 +35,7 @@ export default function Home() {
               <div key={id} className="group rounded-3xl flex-none w-1/4 h-fit p-2 hover:scale-125">
                 <div className="group-hover:">
                   {imageUrl && (
-                    <img
+                    <Image
                       src={imageUrl}
                       alt={name}
                       width={500}
