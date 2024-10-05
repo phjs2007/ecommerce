@@ -28,74 +28,34 @@ export default function Home() {
       <section className="w-screen h-[50vh]  ">
       <Frost />
       </section>
-      <section className="w-full flex overflow-x-auto gap-1 mt-9 ">
+      <section className="w-full flex overflow-x-auto gap-1 mt-9">
           {data.map((game) => {
             const { id, name, nota, descricao_breve, price, imageUrl } = game; // Incluindo imageUrl
             return (
-              <div key={id} className="group rounded-3xl flex-none w-1/4 h-fit p-2 hover:scale-125">
-                <div className="group-hover:">
-                  {imageUrl && (
-                    <Image
-                      src={imageUrl}
-                      alt={name}
-                      width={500}
-                      height={100}
-                      className="object-fill" // Estilo responsivo
-                    />
-                  )}
+              <div key={id} className="group  flex-none grid grid-cols-1 grid-rows-1 w-1/4 h-auto gap-2 mx-11 bg-slate-800 items-center pb-2 text-white">
+                <div>
+                  <Image 
+                  src={"/imagens/bg3.webp"}
+                  alt="bg3"
+                  width={300}
+                  height={200}
+                  className="w-full"
+                  />
                 </div>
-                <div className="flex flex-col space-y-8 bg-slate-700 text-gray-50 p-3 group-hover:text-xs">
-                  <div className="flex justify-between group-hover:text-xs">
-                    <h1 className="group-hover:text-xs">{name}</h1>
-                    <div>
-                      <p>Nota: {nota}</p>
-                    </div>
+                <div className="grid grid-cols-1 grid-rows-1 gap-10 p-2 ">
+                  <div  className="flex gap-2 justify-between">
+                    <h1>Bg3</h1>
+                    <h1>Nota:3.2</h1>
                   </div>
-                  <div>
-                    <p>{descricao_breve}</p> {/* Exibe a descrição breve */}
-                  </div>
-                  <div className="flex justify-end mr-2 group-hover:text-sm">
-                    <p>R${price}</p>
-                  </div>
+                  <div>Em Baldur's Gate 3, os jogadores assumem o papel de um personagem...</div>
                 </div>
               </div>
             );
           })}
         </section>
-        <section className="w-full flex overflow-x-auto gap-1 mt-9 ">
-          {data.map((game) => {
-            const { id, name, nota, descricao_breve, price, imageUrl } = game; // Incluindo imageUrl
-            return (
-              <div key={id} className="group rounded-3xl flex-none w-1/4 h-fit p-2 hover:scale-125">
-                <div className="group-hover:">
-                  {imageUrl && (
-                    <img
-                      src={imageUrl}
-                      alt={name}
-                      width={500}
-                      height={100}
-                      className="object-fill" // Estilo responsivo
-                    />
-                  )}
-                </div>
-                <div className="flex flex-col space-y-8 bg-slate-700 text-gray-50 p-3 group-hover:text-xs">
-                  <div className="flex justify-between group-hover:text-xs">
-                    <h1 className="group-hover:text-xs">{name}</h1>
-                    <div>
-                      <p>Nota: {nota}</p>
-                    </div>
-                  </div>
-                  <div>
-                    <p>{descricao_breve}</p> {/* Exibe a descrição breve */}
-                  </div>
-                  <div className="flex justify-end mr-2 group-hover:text-sm">
-                    <p>R${price}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </section>
+
+       
+        
       </main>
   )
 

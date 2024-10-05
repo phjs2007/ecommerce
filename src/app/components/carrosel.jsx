@@ -36,8 +36,7 @@ export default function Home() {
           <Frost />
         </section>
         <section className="w-full flex overflow-x-auto gap-1 mt-6">
-          {data.map((game) => {
-            const { id, name, nota, descricao_breve, price, imageUrl } = game; // Incluindo imageUrl
+          {data.map((game) => { // Incluindo imageUrl
             return (
               <div key={id} className="group rounded-3xl flex-none w-1/4 h-fit p-2 hover:scale-125">
                 <div className="group-hover:">
